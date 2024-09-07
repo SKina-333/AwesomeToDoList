@@ -6,88 +6,69 @@
     <title>Document</title>
 </head>
 <body>
+
     <div class="container">
-        <div class="sidebar">
-            <div class="sidebar-nav">
-                <div class="sidebar-nav-heading">
-                    <p class="title">Menu</p>
-                    <p class="icon">=</p>
-                </div>
-                <div class="sidebar-searchBar">
-                    ==== Search Bar =====
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="sidebar-item">
-                    <div class="item-title">
-                        Tasks
-                    </div>
-                    <div class="item-list">
-                        <div class="item-tab">
-                            <p class="icon">I</p>
-                            <p class="item-name">name</p>
-                            <p class="counter">0</p>
-                        </div>
-                        <div class="item-tab">
-                            <p class="icon">I</p>
-                            <p class="item-name">name</p>
-                            <p class="counter">0</p>
-                        </div>
-                        <div class="item-tab">
-                            <p class="icon">I</p>
-                            <p class="item-name">name</p>
-                            <p class="counter">0</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+        
+        
         <div class="main">
             <div class="today-container">
                 <div class="today-title">
-                    <p class="title">Today</p>
+                    <p class="title">All</p>
+                    <div class="counter">
+                        <p class="number">0</p>
+                    </div>
                 </div>
-                <div class="add-new-task"></div>
+                <div class="add-new-task">
+                    <i class="fa-solid fa-plus"></i>
+                    <p class="add-title">Add New Task</p>
+                </div>
                 <div class="task-container">
-                    <div class="task-item">item</div>
-                    <div class="task-item">item</div>
+                    <div class="task-item">
+                        <div class="item-group">
+                            <i class="fa-regular fa-message"></i>
+                            <p>Task Item</p>    
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                
                     <div class="task-item">item</div>
                     <div class="task-item">item</div>
                 </div>
             </div>
         </div>
         <div class="detail">
-            <div class="detail-container">
-                <div class="detail-heading">
-                    <p class="title">Tasks:</p>
-                    <p class="icon">X</p>
-                </div>
-                <div class="detail-name">
-                    <p class="name">Name</p>
-                </div>
-                <div class="detail-desc">
-                    <p class="description">
-                        Description
-                    </p>
-                </div>
-                <div class="detail-date">
-                    <p class="date-label">Due Date</p>
-                    <p class="date">00/00/0000</p>
-                </div>
-                <div class="detail-subtask">
-                    <div class="detail-subtask-title">
-                        <p class="title">Subtasks:</p>
-                    </div>
-                    <div class="subtask-container">
-                        <div class="subtask-item">
-                            <p class="icon">+</p>
-                            <p class="name">Subtask name</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-heading">
+                    <p class="form-head">Enter task details:</p>
+                    <i class="fa-solid fa-x" id="closeModal"></i>
+                </div>
+                
+
+                <form id="taskForm">
+                    <label for="Task Name">Task name:</label><br>
+                    <input type="text" id="taskName" name="Task Name" required><br>
+                    <label for="Description">Description:</label><br>
+                    <textarea id="description" name="Description" required></textarea><br>
+                    <label for="Due Date">Due Date:</label><br>
+                    <input type="date" id="date" name="Due Date" required><br>
+                    <label for="Priority">Priority</label><br>
+                    <select id="priority" name="Priority">
+                        <option value="Low">Low</option>
+                        <option value="Mid">Mid</option>
+                        <option value="High">High</option>
+                    </select><br>
+
+                    <button type="button" class="taskAddButton">Submit</button>
+                </form>
+            </div>   
+        </div>
+    
     </div>
 </body>
 </html>
